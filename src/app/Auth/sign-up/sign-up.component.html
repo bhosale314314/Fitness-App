@@ -2,6 +2,7 @@
   <form
     fxLayout="column"
     fxLayoutAlign="center center"
+    fxLayoutGap="15px"
     #f="ngForm"
     (ngSubmit)="onSubmit(f)"
   >
@@ -44,6 +45,32 @@
       <mat-error>Please Enter valid Password </mat-error>
       <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
     </mat-form-field>
-    <button mat-raised-button color="primary" type="submit">Submit</button>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Your DOB"
+        [matDatepicker]="picker"
+        [max]="maxDate"
+        ngModel
+        name="DOB"
+        required
+      />
+      <mat-error>Please Chose your Birthdate</mat-error>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-checkbox ngModel name="T&C" color="primary" required>
+      Agree Terms & Conditions
+    </mat-checkbox>
+
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="f.invalid"
+    >
+      Submit
+    </button>
   </form>
 </section>
