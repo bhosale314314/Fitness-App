@@ -6,20 +6,3 @@ mat-sidenav {
 mat-sidenav {
   width: 250px;
 }
-a {
-  text-decoration: none;
-  color: white;
-}
-a:hover,
-a:active {
-  color: rgb(218, 243, 109);
-}
-.navigation-item {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.navigation-caption {
-  display: inline-block;
-  padding-left: 6px;
-}

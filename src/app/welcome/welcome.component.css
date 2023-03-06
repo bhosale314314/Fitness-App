@@ -1,0 +1,13 @@
+.welcome {
+  text-align: center;
+  color: rgb(89, 13, 231);
+}
+.container {
+  background-image: url(../../assets/workoutLadies.jpg);
+  width: 100%;
+  background-size: cover;
+  height: 593px;
+  position: relative;
+
+  margin: 0 auto;
+}
