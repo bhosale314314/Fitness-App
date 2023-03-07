@@ -11,8 +11,6 @@ export const environment = {
     storageBucket: 'fitness-tracker-ff4a4.appspot.com',
     apiKey: 'AIzaSyCFCdAmDbmBat4gU4z8Yhad_rHMA6xBbGY',
     authDomain: 'fitness-tracker-ff4a4.firebaseapp.com',
-    messagingSenderId: '771186011983',
-    measurementId: 'G-2ZNQKFKYV1',
   },
 };
 
