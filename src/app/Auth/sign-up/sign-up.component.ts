@@ -20,6 +20,6 @@ export class SignUpComponent implements OnInit {
       password: form.value.password,
     });
     form.reset();
-    alert('Successfully Submitted!!😜');
+    alert('Successfully Registered!!😜');
   }
 }
