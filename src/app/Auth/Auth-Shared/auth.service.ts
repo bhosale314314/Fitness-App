@@ -33,8 +33,11 @@ export class AuthService {
     this.authChange.next(false);
     this.router.navigate(['/login']);
   }
+  getUser() {
+    return { ...this.user };
+  }
   isAuth() {
-    this.user != null;
+    return this.user != null;
   }
   private AuthRouting() {
     this.authChange.next(true);

@@ -10,7 +10,9 @@
       <li *ngIf="!isAuth"><a routerLink="/sign-up"> SignUp </a></li>
       <li *ngIf="!isAuth"><a routerLink="/login"> Login </a></li>
       <li *ngIf="isAuth"><a routerLink="/training"> Training </a></li>
-      <li *ngIf="isAuth"><a (click)="onLogout()"> Logout</a></li>
+      <li *ngIf="isAuth">
+        <a (click)="onLogout()" style="cursor: pointer"> Logout</a>
+      </li>
     </ul>
   </div>
 </mat-toolbar>
