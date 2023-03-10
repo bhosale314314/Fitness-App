@@ -27,12 +27,13 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { provideFunctions, getFunctions } from '@angular/fire/functions';
-// import
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { UIService } from './Auth/Auth-Shared/ui.service';
+import { AuthModule } from './Auth/auth/auth.module';
 @NgModule({
   declarations: [
     AppComponent,
-    SignUpComponent,
-    LoginComponent,
+
     TrainingComponent,
     CurrentTrainingComponent,
     NewTrainingComponent,
@@ -57,8 +58,10 @@ import { provideFunctions, getFunctions } from '@angular/fire/functions';
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
     provideFunctions(() => getFunctions()),
+    AngularFireAuthModule,
+    AuthModule,
   ],
-  providers: [AuthService, TrainingService],
+  providers: [AuthService, TrainingService, UIService],
   bootstrap: [AppComponent],
   entryComponents: [StopTrainingComponent],
 })
