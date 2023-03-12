@@ -65,7 +65,7 @@
     </mat-checkbox>
 
     <button
-      *ngIf="!isLoading"
+      *ngIf="(isLoading$ | async) === false"
       mat-raised-button
       color="primary"
       type="submit"
@@ -73,6 +73,6 @@
     >
       Submit
     </button>
-    <mat-spinner *ngIf="isLoading" color="accent"></mat-spinner>
+    <mat-spinner *ngIf="isLoading$ | async" color="accent"></mat-spinner>
   </form>
 </section>

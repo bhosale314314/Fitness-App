@@ -1,25 +1,32 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { AuthService } from '../Auth-Shared/auth.service';
 import { UIService } from '../Auth-Shared/ui.service';
+import { Store } from '@ngrx/store';
+import * as fromRoot from '../../app-reducer';
 
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.css'],
 })
-export class SignUpComponent implements OnInit, OnDestroy {
-  constructor(private authService: AuthService, private uiService: UIService) {}
+export class SignUpComponent implements OnInit {
+  constructor(
+    private authService: AuthService,
+    private uiService: UIService,
+    private store: Store<fromRoot.State>
+  ) {}
   private loadingSubscription: Subscription;
-  isLoading = false;
+  isLoading$: Observable<boolean>;
   maxDate;
   ngOnInit(): void {
-    this.loadingSubscription = this.uiService.loadingStateChanged.subscribe(
-      (loading) => {
-        this.isLoading = loading;
-      }
-    );
+    this.isLoading$ = this.store.select(fromRoot.getIsLoading);
+    // this.loadingSubscription = this.uiService.loadingStateChanged.subscribe(
+    //   (loading) => {
+    //     this.isLoading = loading;
+    //   }
+    // );
     this.maxDate = new Date();
     this.maxDate.setFullYear(this.maxDate.getFullYear() - 18);
   }
@@ -31,7 +38,9 @@ export class SignUpComponent implements OnInit, OnDestroy {
     form.reset();
     alert('Successfully Registered!!😜');
   }
-  ngOnDestroy(): void {
-    this.loadingSubscription.unsubscribe();
-  }
+  // ngOnDestroy(): void {
+  //   if (this.loadingSubscription) {
+  //     this.loadingSubscription.unsubscribe();
+  //   }
+  // }
 }

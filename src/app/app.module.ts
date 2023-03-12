@@ -6,18 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
-import { SignUpComponent } from './Auth/sign-up/sign-up.component';
-import { LoginComponent } from './Auth/login/login.component';
-import { TrainingComponent } from './training/training.component';
-import { CurrentTrainingComponent } from './training/current-training/current-training.component';
-import { NewTrainingComponent } from './training/new-training/new-training.component';
-import { PastTrainingComponent } from './training/past-training/past-training.component';
+
 import { WelcomeComponent } from './welcome/welcome.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './Navigation/header/header.component';
 import { SidenavListComponent } from './Navigation/sidenav-list/sidenav-list.component';
-import { StopTrainingComponent } from './training/current-training/stop-training.component';
+
 import { AuthService } from './Auth/Auth-Shared/auth.service';
 import { TrainingService } from './training/Shared-Data-Service/training.service';
 
@@ -30,18 +25,17 @@ import { provideFunctions, getFunctions } from '@angular/fire/functions';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { UIService } from './Auth/Auth-Shared/ui.service';
 import { AuthModule } from './Auth/auth/auth.module';
+
+import { SharedModule } from './shared/shared.module';
+import { StoreModule } from '@ngrx/store';
+import { reducer } from './app-reducer';
 @NgModule({
   declarations: [
     AppComponent,
 
-    TrainingComponent,
-    CurrentTrainingComponent,
-    NewTrainingComponent,
-    PastTrainingComponent,
     WelcomeComponent,
     HeaderComponent,
     SidenavListComponent,
-    StopTrainingComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,9 +54,13 @@ import { AuthModule } from './Auth/auth/auth.module';
     provideFunctions(() => getFunctions()),
     AngularFireAuthModule,
     AuthModule,
+    StoreModule.forRoot(reducer),
+
+    SharedModule,
+
+    StoreModule.forRoot({}, {}),
   ],
   providers: [AuthService, TrainingService, UIService],
   bootstrap: [AppComponent],
-  entryComponents: [StopTrainingComponent],
 })
 export class AppModule {}
