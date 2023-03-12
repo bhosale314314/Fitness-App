@@ -17,7 +17,7 @@
       <mat-error> Password Dose not Match</mat-error>
     </mat-form-field>
     <button
-      *ngIf="(isLoading$ | async) === false"
+      *ngIf="!(isLoading$ | async)"
       mat-raised-button
       color="warn"
       type="submit"
