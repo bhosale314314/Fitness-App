@@ -1,8 +1,8 @@
-.welcome {
+/* .welcome {
   text-align: center;
   color: rgb(245, 45, 10);
-}
-.container {
+} */
+/* .container {
   background-image: url(../../assets/workoutLadies.jpg);
   width: 100%;
   background-size: cover;
@@ -10,4 +10,163 @@
   position: relative;
 
   margin: 0 auto;
+} */
+/* .body {
+  width: 100%;
+  height: 100px;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+}
+.image-slider {
+  width: 100%;
+  height: 593px;
+  background-image: url(../../assets/Workout.jpg);
+  background-size: 100% 100%;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  animation: changeImage 40s linear infinite;
+}
+@keyframes changeImage {
+  0% {
+    background-image: url(../../assets/fitness-center-gym-emblem-fitness-logo-fitness-center-gym-emblem-fitness-logo-health-center-logo-shield-vector-logo-design-110298169.jpg);
+  }
+  25% {
+    background-image: url(../../assets/images.jpeg);
+  }
+  50% {
+    background-image: url(../../assets/workoutLadies.jpg);
+  }
+  75% {
+    background-image: url(../../assets/Workout1.jpg);
+  }
+  100% {
+    background-image: url(../../assets/fitness-center-logo-sport-fitness-logo-design-gym-logo-icon-design-vector-stock_279597-366.avif);
+  }
+} */
+.bgimage {
+  background-image: url(../../assets/wp6009395.webp);
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.bgImagePosition {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* background: #1111; */
+  background-color: black;
+  opacity: 0;
+}
+.bg {
+  opacity: 1 !important;
+  transition: 1s all ease;
+  animation-duration: 4ms;
+  animation-name: example;
+}
+@keyframes example {
+  0% {
+    opacity: 0.1 !important;
+  }
+  10% {
+    opacity: 0.2 !important;
+  }
+  20% {
+    opacity: 0.3 !important;
+  }
+  30% {
+    opacity: 0.4 !important;
+  }
+  40% {
+    opacity: 0.5 !important;
+  }
+  50% {
+    opacity: 0.6 !important;
+  }
+  60% {
+    opacity: 0.7 !important;
+  }
+  70% {
+    opacity: 0.8 !important;
+  }
+  80% {
+    opacity: 0.9 !important;
+  }
+  90% {
+    opacity: 0.99 !important;
+  }
+  100% {
+    opacity: 1 !important;
+  }
+}
+header {
+  padding: 80px 0;
+}
+.headerFixed {
+  background-color: #111;
+  border-bottom: 1px solid rgb(22, 22, 22);
+  padding: 20px 0;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+.logo {
+  width: 100px;
+}
+.logo img {
+  width: 100%;
+}
+.banner {
+  padding: 80px 0 70px;
+}
+.banner-content h1 {
+  font-size: 85px;
+  font-weight: 600;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+.banner-content p {
+  color: white;
+  font-size: 16px;
+  line-height: 24px;
+  opacity: 0.7;
+  margin-top: 15px;
+  width: 400px;
+}
+.banner-content ul {
+  padding: 0;
+  margin: 40px 0 0;
+}
+.banner-content ul li {
+  display: inline-block;
+  width: 140px;
+}
+.banner-content ul li h2 {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  line-height: 1.1px;
+  font-size: 14px;
+  color: white;
+  text-transform: uppercase;
+}
+.banner-content ul li p {
+  font-size: 10px;
+  opacity: 0.6;
+  font-weight: 600;
+}
+.gallery {
+  background-color: #111;
+}
+.gallery-container {
+  padding: 100px 0;
+  border-top: 1px solid #201b1b;
+}
+.gallery-container img {
+  width: 100%;
 }
