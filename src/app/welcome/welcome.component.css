@@ -1,8 +1,8 @@
-/* .welcome {
+.welcome {
   text-align: center;
-  color: rgb(245, 45, 10);
-} */
-/* .container {
+  color: rgb(73, 227, 233);
+}
+*/ .container {
   background-image: url(../../assets/workoutLadies.jpg);
   width: 100%;
   background-size: cover;
@@ -10,8 +10,8 @@
   position: relative;
 
   margin: 0 auto;
-} */
-/* .body {
+}
+.body {
   width: 100%;
   height: 100px;
   display: grid;
@@ -28,22 +28,25 @@
 }
 @keyframes changeImage {
   0% {
-    background-image: url(../../assets/fitness-center-gym-emblem-fitness-logo-fitness-center-gym-emblem-fitness-logo-health-center-logo-shield-vector-logo-design-110298169.jpg);
+    background-image: url(../../assets/dwayne-johnson-muscles-celebrity-men-wallpaper-thumb.jpg);
   }
-  25% {
-    background-image: url(../../assets/images.jpeg);
+  20% {
+    background-image: url(../../assets/wp6009395.webp);
   }
-  50% {
+  40% {
     background-image: url(../../assets/workoutLadies.jpg);
   }
-  75% {
+  60% {
     background-image: url(../../assets/Workout1.jpg);
   }
-  100% {
-    background-image: url(../../assets/fitness-center-logo-sport-fitness-logo-design-gym-logo-icon-design-vector-stock_279597-366.avif);
+  80% {
+    background-image: url(../../assets/bodybuilder-woman-hd-a6embxmv3gpidq2y.jpg);
   }
-} */
-.bgimage {
+  100% {
+    background-image: url(../../assets/A09I9414-copy-e1598953035388.jpg);
+  }
+}
+/* .bgimage {
   background-image: url(../../assets/wp6009395.webp);
   background-size: cover;
   position: fixed;
@@ -52,18 +55,18 @@
   top: 0;
   left: 0;
   z-index: -1;
-}
-.bgImagePosition {
+} */
+/* .bgImagePosition {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  /* background: #1111; */
-  background-color: black;
+  background: #1111;
+
   opacity: 0;
-}
-.bg {
+} */
+/* .bg {
   opacity: 1 !important;
   transition: 1s all ease;
   animation-duration: 4ms;
@@ -108,7 +111,7 @@ header {
   padding: 80px 0;
 }
 .headerFixed {
-  background-color: #111;
+  background: #111;
   border-bottom: 1px solid rgb(22, 22, 22);
   padding: 20px 0;
   position: fixed;
@@ -156,7 +159,7 @@ header {
   text-transform: uppercase;
 }
 .banner-content ul li p {
-  font-size: 10px;
+  font-size: 12px;
   opacity: 0.6;
   font-weight: 600;
 }
@@ -169,4 +172,4 @@ header {
 }
 .gallery-container img {
   width: 100%;
-}
+} */

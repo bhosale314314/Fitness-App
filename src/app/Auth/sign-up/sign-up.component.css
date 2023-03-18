@@ -1,3 +1,23 @@
 mat-form-field {
   width: 300px;
 }
+.body {
+  /* color: white; */
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  background-image: url(../../../assets/sunrise2.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+.signUp-form form {
+  position: absolute;
+  top: 40%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(rgba(243, 192, 23, 0.863), rgba(0, 0, 0, 0.3));
+  width: 400px;
+  padding: 50px 30px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px #000;
+}

@@ -1,4 +1,5 @@
-<section>
+<div class="body">
+<section class="signUp-form">
   <form
     [formGroup]="loginForm"
     fxLayout="column"
@@ -28,3 +29,96 @@
     <mat-spinner *ngIf="isLoading$ | async" color="accent"></mat-spinner>
   </form>
 </section>
+</div>
+
+<!-- <section class="login py-3 bg-light">
+  <div class="container">
+    <div class="row g-0">
+      <div class="col-lg-5">
+        <img
+          src="../../../assets/bodybuilder-woman-hd-a6embxmv3gpidq2y.jpg"
+          class="img-fluid"
+          alt=""
+        />
+      </div>
+      <div class="col-lg-7 text-center py-5">
+        <h1>Welcome</h1>
+        <p>Log in to your account to continue</p>
+        <form
+          [formGroup]="loginForm"
+          fxLayout="column"
+          fxLayoutGap="20px"
+          fxLayoutAlign="center center"
+          (ngSubmit)="onSubmit()"
+        >
+          <div class="form-row py-3 pt-5">
+            <div class="">
+              <mat-form-field appearance="outline">
+                <mat-label>Please Enter E-mail</mat-label>
+                <input type="email" matInput formControlName="email" />
+                <mat-error> Please Enter Valid E-mail</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="form-row">
+            <mat-form-field appearance="outline">
+              <mat-label>Please Enter Password</mat-label>
+              <input type="password" matInput formControlName="password" />
+              <mat-error> Password Dose not Match</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="form-row">
+            <div class="offset-1 col-lg-10">
+              <button
+                *ngIf="!(isLoading$ | async)"
+                mat-raised-button
+                color="warn"
+                type="submit"
+                [disabled]="loginForm.invalid"
+              >
+                Login
+              </button>
+            </div>
+          </div>
+          <mat-spinner *ngIf="isLoading$ | async" color="accent"></mat-spinner>
+        </form>
+        <p class="signup py-1 pt-4">
+          Don't have account?<a routerLink="/sign-up">Sigup</a>
+        </p>
+        <span> <i class="fa-brands fa-facebook"></i> </span>
+        <span><i class="fa-brands fa-twitter"></i></span>
+        <span><i class="fa-brands fa-linkedin"></i></span>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- <div class="body">
+  <section class="form-container">
+    <h1>Get Logged In</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="control">
+        <label>Enter Email</label>
+        <input type="email" matInput formControlName="email" />
+      </div>
+      <div class="control">
+        <label>Enter Password</label>
+        <input type="password" matInput formControlName="password" />
+      </div>
+      <span><input type="checkbox" />Remember Me</span>
+      <div class="control">
+        <button
+          *ngIf="!(isLoading$ | async)"
+          mat-raised-button
+          type="submit"
+          [disabled]="loginForm.invalid"
+        >
+          login
+        </button>
+      </div>
+    </form>
+    <mat-spinner *ngIf="isLoading$ | async" color="accent"></mat-spinner>
+    <div class="link">
+      <a href="#">forget password?</a>
+    </div>
+  </section>
+</div> -->
