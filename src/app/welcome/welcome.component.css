@@ -2,7 +2,7 @@
   text-align: center;
   color: rgb(73, 227, 233);
 }
-*/ .container {
+.container {
   background-image: url(../../assets/workoutLadies.jpg);
   width: 100%;
   background-size: cover;
